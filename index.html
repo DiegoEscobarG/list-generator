@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta links -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>List Generator</title>
+
+    <!-- styles links -->
+    <link rel="stylesheet" href="./assets/styles/index.css">
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <!-- nav -->
+        <nav class="nav">
+            <!-- logotype -->
+            <p class="logotype">List Generator</p>
+
+            <!-- navigation bar -->
+            <form action="">
+                <input class="input-search" type="text">
+                <button class="btn-search">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+
+        <!-- section for the title and description about the list -->
+        <section class="main-section">
+
+            <div class="div-main-content">
+                <p class="list-title">Title</p>
+                <p class="description-title">Description</p>
+                <button class="btn-add">Add</button>
+            </div>
+
+            <div class="div-content">
+                <p class="p-list-title">My Daily Routine</p>
+                <p class="p-list-title">This is my Daily Routine</p>
+                 <!-- icons for edit and delete content -->
+            <figure>
+                <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
+                <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
+            </figure>
+            </div>
+            
+        </section>
+
+        <!-- section about list generator -->
+        <section class="second-section">
+
+            <div class="div-main-container">
+                <!-- div container -->
+                <div class="div-container">
+                    <!-- header div -->
+                    <div class="div-second-container">
+                        <!-- nav div -->
+                        <div class="nav-second-section">
+                            <!-- logotype -->
+                            <p class="logotype">List Generator</p>
+        
+                            <!-- navigation bar -->
+                            <form action="">
+                                <label for="">All</label>
+                                <input type="radio">
+        
+                                <label for="">Completed</label>
+                                <input type="radio">
+        
+                                <label for="">Uncompleted</label>
+                                <input type="radio">
+        
+                                <input class="input-search" type="text">
+                                <button class="btn-search">Search</button>
+        
+                            </form>
+                        </div>
+                    </div>
+        
+                    <!-- section div -->
+                    <div>
+                        
+                        <!-- div with the main title and description -->
+                        <div class="div-title-description">
+                            <input class="input-title-div" type="text" placeholder="Write your title">
+                            <input class="input-description-div" type="text" placeholder="Write your description">
+                        </div>
+        
+                        <!-- div with title about "to do" and its description -->
+                        <div class="div-main-content">
+                            <div>
+                                <label for="">To do</label>
+                                <input class="input-div-main-content" type="text" placeholder="Supermarket List">
+                            </div>
+        
+                            <div>
+                                <label for="">Description</label>
+                                <input class="input-div-main-content" type="text" placeholder="It's for Friday">
+                            </div>
+        
+                            <button class="btn-add">Add</button>
+        
+                            
+                        </div>
+        
+                        <div class="div-second-content">
+                            
+                                <p>To Do</p>
+                                <p>Description</p>
+                                <p>Completed</p>
+                            
+                                <p class="grid-row">To Do</p>
+                                <p class="grid-row">Description</p>
+                                <input class="grid-row checkbox" type="checkbox">
+                                <figure class="grid-row">
+                                    <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
+                                    <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
+                                </figure>
+                            
+                        </div>
+        
+                        <div class="div-btn-save">
+                            <!-- button to save the information -->
+                            <button class="btn-save">Save</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
