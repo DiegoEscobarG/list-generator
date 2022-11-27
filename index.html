@@ -16,12 +16,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
 
         <!-- nav -->
-        <nav class="nav">
+        <nav class="nav" id="main-nav">
             <!-- logotype -->
             <p class="logotype">List Generator</p>
 
@@ -37,12 +38,12 @@
     <main>
 
         <!-- section for the title and description about the list -->
-        <section class="main-section">
+        <section class="main-section" id="main-section">
 
             <div class="div-main-content">
                 <p class="list-title">Title</p>
                 <p class="description-title">Description</p>
-                <button class="btn-add">Add</button>
+                <button class="btn-add" id="btn-add">Add</button>
             </div>
 
             <div class="div-content">
@@ -58,7 +59,7 @@
         </section>
 
         <!-- section about list generator -->
-        <section class="second-section">
+        <section class="second-section" id="second-section">
 
             <div class="div-main-container">
                 <!-- div container -->
@@ -66,7 +67,7 @@
                     <!-- header div -->
                     <div class="div-second-container">
                         <!-- nav div -->
-                        <div class="nav-second-section">
+                        <div class="nav-second-section" id="nav-second-section">
                             <!-- logotype -->
                             <p class="logotype">List Generator</p>
         
@@ -89,7 +90,11 @@
                     </div>
         
                     <!-- section div -->
-                    <div>
+                    <div id="div-second-section">
+
+                        <div class="error-alert" id="error-alert"> 
+                            Title and Description are required
+                        </div>
                         
                         <!-- div with the main title and description -->
                         <div class="div-title-description">
@@ -101,38 +106,38 @@
                         <div class="div-main-content">
                             <div>
                                 <label for="">To do</label>
-                                <input class="input-div-main-content" type="text" placeholder="Supermarket List">
+                                <input class="input-div-main-content" id="input-title-todo" type="text" placeholder="Supermarket List">
                             </div>
         
                             <div>
                                 <label for="">Description</label>
-                                <input class="input-div-main-content" type="text" placeholder="It's for Friday">
+                                <input class="input-div-main-content" id="input-description-todo" type="text" placeholder="It's for Friday">
                             </div>
         
-                            <button class="btn-add">Add</button>
+                            <button class="btn-add" id="btn-add-second-section">Add</button>
         
                             
                         </div>
         
-                        <div class="div-second-content">
+                        <div class="div-second-content" id="div-second-content">
                             
-                                <p>To Do</p>
-                                <p>Description</p>
-                                <p>Completed</p>
+                            <p>To Do</p>
+                            <p>Description</p>
+                            <p>Completed</p>
                             
-                                <p class="grid-row">To Do</p>
-                                <p class="grid-row">Description</p>
-                                <input class="grid-row checkbox" type="checkbox">
-                                <figure class="grid-row">
-                                    <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
-                                    <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
-                                </figure>
+                            <p class="grid-row">To Do</p>
+                            <p class="grid-row">Description</p>
+                            <input class="grid-row checkbox" type="checkbox">
+                            <figure class="grid-row">
+                                <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
+                                <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
+                            </figure>
                             
                         </div>
         
                         <div class="div-btn-save">
                             <!-- button to save the information -->
-                            <button class="btn-save">Save</button>
+                            <button class="btn-save" id="btn-save">Save</button>
                         </div>
                         
                     </div>
@@ -141,5 +146,8 @@
         </section>
 
     </main>
+
+    <!-- scripts -->
+    <script src="./assets/scripts/main.js"></script>
 </body>
 </html>
