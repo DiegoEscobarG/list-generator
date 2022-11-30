@@ -114,24 +114,38 @@
                                 <input class="input-div-main-content" id="input-description-todo" type="text" placeholder="It's for Friday">
                             </div>
         
-                            <button class="btn-add" id="btn-add-second-section">Add</button>
+                            <button class="btn-add" id="btn-add-table">Add</button>
         
                             
                         </div>
         
                         <div class="div-second-content" id="div-second-content">
                             
-                            <p>To Do</p>
-                            <p>Description</p>
-                            <p>Completed</p>
-                            
-                            <p class="grid-row">To Do</p>
-                            <p class="grid-row">Description</p>
-                            <input class="grid-row checkbox" type="checkbox">
-                            <figure class="grid-row">
-                                <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
-                                <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
-                            </figure>
+                            <table id="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">To Do</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Completed</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Example</td>
+                                        <td>This is an example</td>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>
+                                            <figure>
+                                                <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
+                                                <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             
                         </div>
         

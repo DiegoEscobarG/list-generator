@@ -162,9 +162,18 @@ form {
 }
 
 .div-second-content {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-around;
+   display: flex;
+   justify-content: center;
+}
+
+table {
+    width: 100%;
+    margin: 16px;
+    text-align: center;
+}
+
+.th-transparent {
+    width: 100%;
 }
 
 .error-alert {
@@ -173,15 +182,6 @@ form {
     justify-content: center;
     margin: 16px 0;
     color: var(--red-main-color);
-}
-
-.grid-row {
-    grid-row: 2 / 3
-}
-
-.checkbox {
-    width: 12px;
-    place-self: center;
 }
 
 .div-btn-save {

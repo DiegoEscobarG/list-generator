@@ -8,17 +8,14 @@ document.addEventListener('DOMContentLoaded', function(){
     const errorAlert = document.getElementById('error-alert')
     const inputTitleToDo = document.getElementById('input-title-todo');
     const inputDescriptionToDo = document.getElementById('input-description-todo');
-    const btnAddSecondSection = document.getElementById('btn-add-second-section');
+    const btnAddTable = document.getElementById('btn-add-table');
+    const table = document.getElementById('table')
     const btnSave = document.getElementById('btn-save');
-    const divSecondSection = document.getElementById('div-second-section');
-    const divSecondContent = document.getElementById('div-second-content');
-
-
 
     // events
     btnAdd.addEventListener('click', btnMainSectionToSecondSection);
     btnSave.addEventListener('click', btnSecondSectionToMainSection);
-    btnAddSecondSection.addEventListener('click', addInformation);
+    btnAddTable.addEventListener('click', addInformation);
 
     // functions
     function btnMainSectionToSecondSection(){
@@ -40,13 +37,20 @@ document.addEventListener('DOMContentLoaded', function(){
             errorAlert.style.display = 'flex';
         } else {
             errorAlert.style.display = 'none';
-            const pToDo = document.createElement('p');
-            pToDo.innerText = inputTitleToDo.value;
-            divSecondContent.appendChild(pToDo);
-            const pDescription = document.createElement('p');
-            const inputCheckbox = document.createElement('input');
-            const figureIconsTrashPencil = document.createElement('figure');
-
+            const row = table.insertRow();
+            row.innerHTML = `
+                <td>${inputTitleToDo.value}</td>
+                <td>${inputDescriptionToDo.value}</td>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    <figure>
+                        <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
+                        <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
+                    </figure>
+                </td>
+            `
         }
     };
 
