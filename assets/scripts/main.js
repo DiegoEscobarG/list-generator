@@ -10,11 +10,10 @@ document.addEventListener('DOMContentLoaded', function(){
     const inputDescriptionToDo = document.getElementById('input-description-todo');
     const btnAddTable = document.getElementById('btn-add-table');
     const table = document.getElementById('table')
-    const btnSave = document.getElementById('btn-save');
+    const imgTrashSolid = document.getElementById('img-trash-solid');
+    let id = 1;
 
     // events
-    btnAdd.addEventListener('click', btnMainSectionToSecondSection);
-    btnSave.addEventListener('click', btnSecondSectionToMainSection);
     btnAddTable.addEventListener('click', addInformation);
 
     // functions
@@ -38,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
         } else {
             errorAlert.style.display = 'none';
             const row = table.insertRow();
+            row.setAttribute('id', id++);
             row.innerHTML = `
                 <td>${inputTitleToDo.value}</td>
                 <td>${inputDescriptionToDo.value}</td>
@@ -45,13 +45,26 @@ document.addEventListener('DOMContentLoaded', function(){
                     <input type="checkbox">
                 </td>
                 <td>
-                    <figure>
-                        <img class="img-pencil-solid" src="./assets/icons/pencil-solid.svg" alt="">
-                        <img class="img-trash-solid" src="./assets/icons/trash-solid.svg" alt="">
-                    </figure>
+                    <button class="btn-pencil">
+                        <i class="fa fa-pencil"></i>
+                    </button>
                 </td>
             `
+
+            const btnTrash = document.createElement('button');
+            btnTrash.classList.add('btn-trash');
+            btnTrash.innerHTML = '<i class="fa fa-trash"></i>';
+            btnTrash.onclick = function (){
+                removeToDo(row.getAttribute('id'));
+            }
+            row.children[3].appendChild(btnTrash);
         }
     };
 
+    function removeToDo(id){
+        document.getElementById(id).remove();
+    }
+
+    
+    
 });
